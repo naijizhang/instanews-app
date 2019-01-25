@@ -6,10 +6,19 @@ body {
   font-weight: 300;
   font-style: normal;
 }
+loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  img {
+    width: 20%;
+  }
+}
 .mediumGrey {
   color: #c2c2c2;
 }
-
 
 @include tablet {
   body {
