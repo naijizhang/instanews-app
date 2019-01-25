@@ -158,7 +158,16 @@ header {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin: 32% auto; }
+  header p {
+    font-size: 13px;
+    margin: 18px auto; }
+  header select {
+    font-size: 18px;
+    border: none; }
+    header select:focus {
+      border: none; }
 
 .item {
   position: relative; }
@@ -173,8 +182,12 @@ header {
 
 footer {
   position: absolute;
-  bottom: 0px;
+  bottom: 6%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  margin: 0px; }
+  font-size: 14px; }
+
+.bottom {
+  position: absolute;
+  bottom: 0px; }

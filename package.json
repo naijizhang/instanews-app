@@ -8,6 +8,7 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": "https://github.com/naijizhang/instanews-app",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",

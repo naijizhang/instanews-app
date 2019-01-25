@@ -1,6 +1,18 @@
 header {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 32% auto;
+  p {
+    font-size: 13px;
+    margin: 18px auto;
   }
+  select {
+    font-size: 18px;
+    border: none;
+    &:focus {
+      border: none;
+    }
+  }
+}
