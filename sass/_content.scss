@@ -1,0 +1,12 @@
+.item {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    p {
+      position: absolute;
+      bottom: 0px;
+      line-height: 20px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+  }

@@ -17,6 +17,12 @@ $(function() {
     })
       .done(function(data) {
         //append all the things
+        //1.filter data (12 articles with img)
+        //2.creat .each
+        
+        //3.const for url title link
+        //4.make html
+        //5.append
         var index;
         for (index in data.results.slice(0,12)) {
         //   $(".sectionContent").append('<p>'+data.results[index].title+'</p>');
@@ -25,7 +31,7 @@ $(function() {
         }
       })
       .fail(function() {
-        console.log("erroe");
+        console.log("error");
       })
       .always(function() {
         //hide loader
