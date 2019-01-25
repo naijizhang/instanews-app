@@ -1,0 +1,17 @@
+body {
+  background: black;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+}
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.mediumGrey {
+  color: #c2c2c2;
+}
