@@ -164,7 +164,9 @@ loader {
 .sectionHeader {
   height: 300px; }
   .sectionHeader img {
-    width: 150px; }
+    width: 150px;
+    -webkit-transition: margin 1s ease-in-out 1s;
+    transition: margin 1s ease-in-out 1s; }
 
 @media (min-width: 600px) {
   .sectionHeader {
@@ -181,7 +183,8 @@ loader {
             align-items: center; }
     .sectionHeader img {
       width: 70px;
-      margin: auto 90px; }
+      margin: auto 90px;
+      margin-right: 110px; }
     .sectionHeader p {
       margin-top: 0px; } }
 
@@ -205,9 +208,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80%;
-  -webkit-transition: all 0.3s ease 0.5s;
-  transition: all 0.3s ease 0.5s; }
+  height: 80%; }
   header .label-select {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -218,7 +219,12 @@ header {
             flex-flow: column nowrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    -webkit-transition: margin 1s ease-in-out 1s;
+    transition: margin 1s ease-in-out 1s; }
+  header img {
+    -webkit-transition: margin 1s ease-in-out 1s;
+    transition: margin 1s ease-in-out 1s; }
   header p {
     display: inline;
     font-size: 13px;
@@ -244,7 +250,8 @@ header {
       width: 22vw;
       margin-right: 20px; }
     header .label-select {
-      width: 30vw; }
+      width: 30vw;
+      margin-top: 20px; }
     header p {
       margin: 18px 0px; }
     header select {

@@ -2,7 +2,9 @@
   height: 300px;
   img {
     width: 150px;
+    transition: margin 1s ease-in-out 1s;
   }
+  //transition: all 1s ease-in-out 1s;
 }
 @include tablet {
   .sectionHeader {
@@ -13,6 +15,7 @@
     img {
       width: 70px;
       margin: auto 90px;
+      margin-right: 110px;
     }
     p {
       margin-top: 0px;
@@ -21,12 +24,12 @@
 }
 
 @include desktop {
-    .sectionHeader{
-        img {
-            margin: auto 30px;
-          }
-          .label-select{
-            margin: auto 50px;
-          }
+  .sectionHeader {
+    img {
+      margin: auto 30px;
     }
+    .label-select {
+      margin: auto 50px;
+    }
+  }
 }

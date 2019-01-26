@@ -8,6 +8,10 @@ header {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    transition: margin 1s ease-in-out 1s;
+  }
+  img{
+    transition: margin 1s ease-in-out 1s;
   }
   p {
     display: inline;
@@ -23,7 +27,7 @@ header {
       border: none;
     }
   }
-  transition: all 0.3s ease 0.5s;
+ 
 }
 @include tablet {
   header {
@@ -35,6 +39,7 @@ header {
     }
     .label-select {
       width: 30vw;
+      margin-top:20px;
     }
     p{
         margin: 18px 0px;
