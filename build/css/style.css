@@ -170,7 +170,7 @@ loader {
 
 @media (min-width: 600px) {
   .sectionHeader {
-    height: 25%;
+    height: 135px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
