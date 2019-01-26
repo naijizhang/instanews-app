@@ -4,36 +4,56 @@ header {
   justify-content: center;
   align-items: center;
   height: 80%;
-  .label-select{
+  .label-select {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-}
+  }
   p {
-      display: inline;
+    display: inline;
     font-size: 13px;
     margin: 18px auto;
   }
   select {
+    width: 120px;
+    margin: 0px auto;
     font-size: 18px;
     border: none;
     &:focus {
       border: none;
     }
   }
+  transition: all 0.3s ease 0.5s;
 }
-@include tablet{
-    header{
-        flex-flow:row nowrap;
-        justify-content: flex-start;
-        img{
-            width: 22vw;
-            margin-left: 100px;
-            margin-right: 20px;
-        }
-        
+@include tablet {
+  header {
+    flex-flow: row nowrap;
+    justify-content: center;
+    img {
+      width: 22vw;
+      margin-right: 20px;
     }
+    .label-select {
+      width: 30vw;
+    }
+    p{
+        margin: 18px 0px;
+    }
+    select{
+        margin: 0px;
+    }
+  }
 }
-@include desktop{
-    
+@include desktop {
+  header {
+    justify-content: flex-start;
+    p {
+      font-size: 16px;
+    }
+    img {
+      width: 210px;
+      margin-left: 50px;
+      margin-right: 70px;
+    }
+  }
 }
