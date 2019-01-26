@@ -1,0 +1,32 @@
+.sectionHeader {
+  height: 300px;
+  img {
+    width: 150px;
+  }
+}
+@include tablet {
+  .sectionHeader {
+    height: 25%;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      width: 70px;
+      margin: auto 90px;
+    }
+    p {
+      margin-top: 0px;
+    }
+  }
+}
+
+@include desktop {
+    .sectionHeader{
+        img {
+            margin: auto 30px;
+          }
+          .label-select{
+            margin: auto 50px;
+          }
+    }
+}

@@ -5,7 +5,11 @@ $(function() {
   $("#sections").on("change", function() {
     const sectionName = $(this).val();
     $("body").addClass("resetBody");
+    $(".site-header").addClass("sectionHeader");
     //if value=null  return
+    if (sectionName === "") {
+      return console.log("null");
+    }
     //  show loading
     $("loader").show();
     //clear stories
@@ -42,14 +46,14 @@ $(function() {
             const html =
               "<div onclick=\"window.open('" +
               link +
-              '\',\'mywindow\');" class="item"><img src="' +
+              "','mywindow');\" class=\"item\" style='background-image:url(" +
               url +
-              '"><p>' +
+              ")'><p>" +
               abstract +
               "</p></div>";
             //append all the things
             $(".sectionContent").append(html);
-            //check if the number of article fit the requirement break the loop(stop loading new articles) 
+            //check if the number of article fit the requirement break the loop(stop loading new articles)
             if (numberOfArticles == articleRequired) {
               break;
             }

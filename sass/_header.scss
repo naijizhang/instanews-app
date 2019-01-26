@@ -4,7 +4,13 @@ header {
   justify-content: center;
   align-items: center;
   height: 80%;
+  .label-select{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
   p {
+      display: inline;
     font-size: 13px;
     margin: 18px auto;
   }
@@ -15,4 +21,19 @@ header {
       border: none;
     }
   }
+}
+@include tablet{
+    header{
+        flex-flow:row nowrap;
+        justify-content: flex-start;
+        img{
+            width: 22vw;
+            margin-left: 100px;
+            margin-right: 20px;
+        }
+        
+    }
+}
+@include desktop{
+    
 }

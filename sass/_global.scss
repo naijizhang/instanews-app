@@ -26,15 +26,3 @@ loader {
 .mediumGrey {
   color: #c2c2c2;
 }
-
-@include tablet {
-  body {
-    background: green;
-  }
-}
-
-@include desktop {
-  body {
-    background: red;
-  }
-}
