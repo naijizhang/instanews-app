@@ -127,12 +127,26 @@ table {
   border-spacing: 0; }
 
 body {
+  height: 100vh;
   background: black;
   font-size: 16px;
   color: #ffffff;
   font-family: "Open Sans";
   font-weight: 300;
-  font-style: normal; }
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.resetBody {
+  display: block; }
 
 loader {
   position: absolute;
@@ -169,7 +183,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 32% auto; }
+  height: 80%; }
   header p {
     font-size: 13px;
     margin: 18px auto; }
@@ -191,13 +205,16 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
 
 footer {
-  position: absolute;
-  bottom: 6%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 14px; }
-
-.bottom {
-  position: absolute;
-  bottom: 0px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20%;
+  font-size: 14px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  footer p {
+    display: inline; }

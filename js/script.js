@@ -1,11 +1,15 @@
 $(function() {
-  $("#sections").on("change", function() {
-    var sectionName = $(this).val();
+  const articleRequired = 12; // number of article required on each page
 
+  $("loader").hide();
+  $("#sections").on("change", function() {
+    const sectionName = $(this).val();
+    $("body").addClass("resetBody");
     //if value=null  return
     //  show loading
+    $("loader").show();
     //clear stories
-    $('.placeHolder').empty();
+    $(".sectionContent").empty();
     //make ajax request
     $.ajax({
       method: "GET",
@@ -16,18 +20,40 @@ $(function() {
       dataType: "json"
     })
       .done(function(data) {
-        //append all the things
-        //1.filter data (12 articles with img)
-        //2.creat .each
-        
-        //3.const for url title link
-        //4.make html
-        //5.append
-        var index;
-        for (index in data.results.slice(0,12)) {
-        //   $(".sectionContent").append('<p>'+data.results[index].title+'</p>');
-          $(".sectionContent").append('<div class="item"><img src="'+data.results[index].multimedia[4].url+'"><p>'+data.results[index].abstract+'</p></div>');
-          
+        //change body
+        // display: flex;
+        // flex-flow: column nowrap;
+        // justify-content: space-between;
+
+        var numberOfArticles = 0;
+        //creat for loop
+        for (var index = 0; index < data.results.length; index++) {
+          //filter data (12 articles with img)
+          if (isImageEmpty(data.results[index].multimedia)) {
+            continue;
+          } else {
+            numberOfArticles++; //count for articles which has img
+            //const for url title link
+            const title = data.results[index].title,
+              abstract = data.results[index].abstract,
+              url = data.results[index].multimedia[4].url,
+              link = data.results[index].url;
+            //make html
+            const html =
+              "<div onclick=\"window.open('" +
+              link +
+              '\',\'mywindow\');" class="item"><img src="' +
+              url +
+              '"><p>' +
+              abstract +
+              "</p></div>";
+            //append all the things
+            $(".sectionContent").append(html);
+            //check if the number of article fit the requirement break the loop(stop loading new articles) 
+            if (numberOfArticles == articleRequired) {
+              break;
+            }
+          }
         }
       })
       .fail(function() {
@@ -35,6 +61,7 @@ $(function() {
       })
       .always(function() {
         //hide loader
+        $("loader").hide();
       });
   });
 });
@@ -56,3 +83,11 @@ $(function() {
 //4.if unsuccess, show helpful to user
 
 //5.hide the loader
+
+function isImageEmpty(media) {
+  if (media.length == 0) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
