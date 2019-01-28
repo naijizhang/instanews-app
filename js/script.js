@@ -68,15 +68,14 @@ $(function() {
         //hide loader
         $("loader").hide();
       });
+
+    //check if the article has image.  (Empty --- 1; Has image --- 0)
+    function isImageEmpty(media) {
+      if (media.length === 0) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
   });
-  //check if the article has image.  (Empty --- 1; Has image --- 0)
-function isImageEmpty(media) {
-  if (media.length === 0) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
 });
-
-
