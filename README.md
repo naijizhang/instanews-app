@@ -1,19 +1,27 @@
 # Project 2
 
-This is a project t
+This project is a one-page responsive website, as part of the Web development program at RED Academy. This website appling Sass and API. It can request content using the New York Times API and the styling was built using Sass preprocessing. Some transitions are also added to have a smooth responsive page.
 
 ## Skills learned
 
 -HTML
 
--CSS
+-Sass
 
--Responsive Web design
+-Ajax
 
--Git
+-JSON
+
+-Gulp
+
+-Eslint
 
 -JavaScript
 
 -jQuery
+
+-Responsive Web design
+
+-Git
 
 -Linux Command line skill
