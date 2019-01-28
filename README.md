@@ -2,7 +2,7 @@
 
 This project is a one-page responsive website, as part of the Web development program at RED Academy. This website appling Sass and API. It can request content using the New York Times API and the styling was built using Sass preprocessing. Some transitions are also added between UIs.
 
-##Usage
+## Usage
 
 On the home page, there is a drop-down menu. You can select topics, and the page will list 12 articles related to the chosen topic when you make selections. The materials are from the New York Times API.
 
