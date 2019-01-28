@@ -10,6 +10,8 @@ body {
   flex-flow: column nowrap;
   justify-content: space-between;
 }
+
+// reset body display when select drop down menu
 .resetBody{
     display: block;
 }

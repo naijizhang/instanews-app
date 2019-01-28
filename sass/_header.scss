@@ -29,14 +29,13 @@ header {
   }
 }
 
-//will be added to header when click
+//this class will be added to header when select drop down menu
 .sectionHeader {
   height: 300px;
   img {
     width: 150px;
     transition: margin 1s ease-in-out 1s;
   }
-  //transition: all 1s ease-in-out 1s;
 }
 @include tablet {
   header {
