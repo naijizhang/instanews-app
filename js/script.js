@@ -9,7 +9,7 @@ $(function() {
     $("body").addClass("resetBody");
     //add new style to header
     $(".site-header").addClass("sectionHeader");
-    //if value=null  return
+    //if value=null  return 
     if (sectionName === "") {
       return console.log("null");
     }
@@ -30,28 +30,35 @@ $(function() {
     })
       .done(function(data) {
         //count for articles
-        var numberOfArticles = 0;
+        let numberOfArticles = 0;
         //creat for loop
-        for (var index = 0; index < data.results.length; index++) {
+        for (let index = 0; index < data.results.length; index++) {
           //filter data (12 articles with img)
           if (isImageEmpty(data.results[index].multimedia)) {
             continue;
           } else {
             numberOfArticles++; //count for articles which has img
             //const for url,title,link,abstract
-            const title = data.results[index].title,
-              abstract = data.results[index].abstract,
-              url = data.results[index].multimedia[4].url,
-              link = data.results[index].url;
-            //make html
-            const html =
-              "<div onclick=\"window.open('" +
-              link +
-              "','mywindow');\" class=\"item\" style='background-image:url(" +
-              url +
-              ")'><p>" +
-              abstract +
-              "</p></div>";
+            const { title, abstract, multimedia, link } = data.results[index];
+            // const title= data.results[index].title,
+            //   abstract = data.results[index].abstract,
+            //   url = data.results[index].multimedia[4].url,
+            //   link = data.results[index].url;
+
+            // //make html
+            // const html =
+            //   "<div onclick=\"window.open('" +
+            //   link +
+            //   "','mywindow');\" class=\"item\" style='background-image:url(" +
+            //   url +
+            //   ")'><p>" +
+            //   abstract +
+            //   "</p></div>";
+
+            //ES2015 style
+            const html = `<div onclick="window.open('${link}','mywindow');" class="item" style="background-image:url(${
+              multimedia[4].url
+            })"><p>${abstract}</p></div>`;
             //append all the things
             $(".sectionContent").append(html);
             //check if the number of article fit the requirement break the loop(stop loading new articles)
@@ -61,21 +68,21 @@ $(function() {
           }
         }
       })
-      .fail(function() {
+      .fail(() => {
         console.log("error");
       })
-      .always(function() {
+      .always(() => {
         //hide loader
         $("loader").hide();
       });
 
     //check if the article has image.  (Empty --- 1; Has image --- 0)
-    function isImageEmpty(media) {
+    const isImageEmpty = media => {
       if (media.length === 0) {
         return 1;
       } else {
         return 0;
       }
-    }
+    };
   });
 });

@@ -10,7 +10,9 @@
     "no-empty": 1,
     "no-param-reassign": 1,
     "no-unused-vars": 1,
-    "quotes": [1, "single"]
+    "quotes": [1, "single"],
+    
+    "strict": 0
   },
   "globals": {
     "jQuery": false,
@@ -21,5 +23,7 @@
   },
   "parserOptions": {
     "ecmaVersion": 2017
-}
+  },
+  "parser": "babel-eslint"
+  
 }

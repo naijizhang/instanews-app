@@ -298,13 +298,13 @@ header {
   background-size: cover;
   background-position: center; }
   .item p {
-    width: 100%;
+    width: 99vw;
     position: absolute;
     bottom: 0px;
     line-height: 25px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    padding: 8px; }
+    padding: 1vw; }
 
 @media (min-width: 600px) {
   .sectionContent {
@@ -316,11 +316,15 @@ header {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap; }
   .item {
-    width: 50%; } }
+    width: 50vw; }
+    .item p {
+      width: 48vw; } }
 
 @media (min-width: 1000px) {
   .item {
-    width: 25%; } }
+    width: 25vw; }
+    .item p {
+      width: 23vw; } }
 
 footer {
   display: -webkit-box;

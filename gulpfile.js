@@ -6,7 +6,8 @@ const gulp = require("gulp"),
   eslint = require("gulp-eslint"),
   sass = require("gulp-sass"),
   autoprefixer = require("gulp-autoprefixer"),
-  prettyError = require("gulp-prettyerror");
+  prettyError = require("gulp-prettyerror"),
+  babel = require("gulp-babel");
 
 gulp.task("sass", function() {
   return gulp
@@ -27,7 +28,7 @@ gulp.task("sass", function() {
 //Task to watch for changes to css files and do minify
 gulp.task("watch", function(done) {
   gulp.watch("sass/*.scss", gulp.series("sass"));
-  gulp.watch("js/*.js", gulp.series("scripts"));
+  gulp.watch("js/script.js", gulp.series("babel"));
   done();
 });
 
@@ -66,3 +67,14 @@ gulp.task(
       .pipe(gulp.dest("./build/js"));
   })
 );
+
+//Gulp Babel
+const input = "./js/script.js";
+const output = "js/";
+gulp.task("babel", gulp.series(() => {
+  return gulp
+    .src(input)
+    .pipe(babel())
+    .pipe(rename( "es2015style.js" ))
+    .pipe(gulp.dest(output));
+},"scripts") );
