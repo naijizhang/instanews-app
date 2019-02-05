@@ -4,12 +4,12 @@
   background-size: cover;
   background-position: center;
   p {
-    width: 100%;
+    width: 99vw;
     position: absolute;
     bottom: 0px;
     line-height: 25px;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    padding: 8px;
+    padding: 1vw;
   }
 }
 @include tablet {
@@ -18,11 +18,17 @@
         flex-flow: row wrap;
     }
   .item {
-      width: 50%;
+      width: 50vw;
+      p{
+          width: 48vw;
+      }
   }
 }
 @include desktop {
     .item {
-        width: 25%;
+        width: 25vw;
+        p{
+            width: 23vw;
+        }
     }
 }
