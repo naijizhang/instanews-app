@@ -4,12 +4,12 @@
   background-size: cover;
   background-position: center;
   p {
-    width: 100%;
+    width: 96%;
     position: absolute;
     bottom: 0px;
     line-height: 25px;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    padding: 8px;
+    padding: 2%;
   }
 }
 @include tablet {
