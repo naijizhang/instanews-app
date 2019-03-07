@@ -2,8 +2,8 @@ body {
   height: 100vh;
   background: black;
   font-size: 16px;
-  color: #ffffff;
-  font-family: "Open Sans";
+  color: $color__white;
+  font-family: $main-font;
   font-weight: 300;
   font-style: normal;
   display: flex;
@@ -26,5 +26,5 @@ body {
   }
 }
 .mediumGrey {
-  color: #c2c2c2;
+  color: $color__medium-grey;
 }
