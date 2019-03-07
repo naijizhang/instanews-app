@@ -1,8 +1,9 @@
 $(function() {
   // number of article required on each page
   const articleRequired = 12;
-
-  $(".loader").hide();
+  const loader= $(".loader");
+  const sectionContent=$(".sectionContent");
+  loader.hide();
   $("#sections").on("change", function() {
     const sectionName = $(this).val();
     //set body display to block
@@ -14,9 +15,9 @@ $(function() {
       return console.log("null");
     }
     //  show loading
-    $(".loader").show();
+   loader.show();
     //clear stories
-    $(".sectionContent").empty();
+   sectionContent.empty();
     getNews(sectionName);
   
   });
@@ -67,7 +68,7 @@ $(function() {
               abstract +
               "</p></a>";
             //append all the things
-            $(".sectionContent").append(html);
+           sectionContent.append(html);
             //check if the number of article fit the requirement break the loop(stop loading new articles)
             if (numberOfArticles === articleRequired) {
               break;
@@ -80,7 +81,7 @@ $(function() {
       })
       .always(function() {
         //hide loader
-        $(".loader").hide();
+       loader.hide();
       });
   }
 });
