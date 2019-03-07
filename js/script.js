@@ -2,7 +2,7 @@ $(function() {
   // number of article required on each page
   const articleRequired = 12;
 
-  $("loader").hide();
+  $(".loader").hide();
   $("#sections").on("change", function() {
     const sectionName = $(this).val();
     //set body display to block
@@ -14,7 +14,7 @@ $(function() {
       return console.log("null");
     }
     //  show loading
-    $("loader").show();
+    $(".loader").show();
     //clear stories
     $(".sectionContent").empty();
     //make ajax request
@@ -45,13 +45,13 @@ $(function() {
               link = data.results[index].url;
             //make html
             const html =
-              "<div onclick=\"window.open('" +
+              "<a href=" +
               link +
-              "','mywindow');\" class=\"item\" style='background-image:url(" +
+              " class=\"item\" style='background-image:url(" +
               url +
               ")'><p>" +
               abstract +
-              "</p></div>";
+              "</p></a>";
             //append all the things
             $(".sectionContent").append(html);
             //check if the number of article fit the requirement break the loop(stop loading new articles)
@@ -66,7 +66,7 @@ $(function() {
       })
       .always(function() {
         //hide loader
-        $("loader").hide();
+        $(".loader").hide();
       });
 
     //check if the article has image.  (Empty --- 1; Has image --- 0)

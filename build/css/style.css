@@ -176,14 +176,14 @@ body {
 .resetBody {
   display: block; }
 
-loader {
+.loader {
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center; }
-  loader img {
+  .loader img {
     width: 100px; }
 
 .mediumGrey {
@@ -298,6 +298,7 @@ header {
   background-size: cover;
   background-position: center; }
   .item p {
+    color: white;
     width: 96%;
     position: absolute;
     bottom: 0px;
