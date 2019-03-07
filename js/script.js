@@ -17,7 +17,21 @@ $(function() {
     $(".loader").show();
     //clear stories
     $(".sectionContent").empty();
-    //make ajax request
+    getNews(sectionName);
+  
+  });
+
+   //check if the article has image.  (Empty --- 1; Has image --- 0)
+   function isImageEmpty(media) {
+    if (media.length === 0) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
+  function getNews(sectionName){
+       //make ajax request
     $.ajax({
       method: "GET",
       url:
@@ -30,9 +44,9 @@ $(function() {
     })
       .done(function(data) {
         //count for articles
-        var numberOfArticles = 0;
+        let numberOfArticles = 0;
         //creat for loop
-        for (var index = 0; index < data.results.length; index++) {
+        for (let index = 0; index < data.results.length; index++) {
           //filter data (12 articles with img)
           if (isImageEmpty(data.results[index].multimedia)) {
             continue;
@@ -68,14 +82,5 @@ $(function() {
         //hide loader
         $(".loader").hide();
       });
-
-    //check if the article has image.  (Empty --- 1; Has image --- 0)
-    function isImageEmpty(media) {
-      if (media.length === 0) {
-        return 1;
-      } else {
-        return 0;
-      }
-    }
-  });
+  }
 });
