@@ -56,7 +56,8 @@ $(function() {
             //const for url,title,link,abstract
             const title = data.results[index].title,
               abstract = data.results[index].abstract,
-              url = data.results[index].multimedia[4].url,
+              media = data.results[index].multimedia,
+              url = data.results[index].multimedia[media.length-1].url,
               link = data.results[index].url;
             //make html
             const html =
