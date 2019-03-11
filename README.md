@@ -23,11 +23,11 @@ In this project, I learned how to write clear and effective code using sass. I c
 * Linux Command line skill
 
 ## Overview
-### Home page
+* Home page
 <img src="./docs/home-screenshot.png" style="width: 100%;" />
-### Desktop size
+* Desktop size
 <img src="./docs/desktop-screenshot.png" style="width: 100%;" />
-### Tablet size
+* Tablet size
 <img src="./docs/tablet-screenshot.png" style="width: 100%;" />
-### Mobile size
+* Mobile size
 <img src="./docs/mobile-screenshot.png" style="width: 100%;" />
